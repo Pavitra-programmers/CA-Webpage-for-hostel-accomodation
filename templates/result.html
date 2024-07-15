@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Result</title>
+{% endblock head %}
+{% block body %}
+<div class="container">
+    <h1>Accommodation Results</h1>
+    
+    {% for gender, students in accommodation.items() %}
+        <h2>{{ gender }}:</h2>
+        <ul>
+            {% for student in students %}
+                <li>{{ student.ID }} - {{ student.Name }} (Age: {{ student.Age }})</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+    
+    <a href="/">Back to Upload</a>
+</div>
+{% endblock body %}

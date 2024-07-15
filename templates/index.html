@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h1>Upload CSV Files</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file1">CSV File 1:</label>
+            <input type="file" id="file1" name="file1" accept=".csv"><br><br>
+
+            <label for="file2">CSV File 2:</label>
+            <input type="file" id="file2" name="file2" accept=".csv"><br><br>
+
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+{% endblock body%}
